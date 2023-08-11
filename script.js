@@ -1,5 +1,14 @@
 const loginForm = document.getElementById('login-form');
+const username_box = document.getElementById('username_box');
+const password_box = document.getElementById('password_box');
 
+username_box.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            password_box.classList.remove('hide')
+            username_box.classList.add('hide');
+
+        }
+    });
 loginForm.addEventListener('submit', function(event) {
   event.preventDefault();
 
